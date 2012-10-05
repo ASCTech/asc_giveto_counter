@@ -11,7 +11,7 @@ function asc_giveto_counter_init() {
 
 function asc_giveto_counter_cron() {
   $contents = drupal_http_request('http://www.osu.edu/giving/feeds/gift-amount.js');
-  $amount = drupal_json_decode($contents);
-  variable_set('asc_giveto_counter_amount', $amount->amount);
+  preg_match("/\d+/", $contents->data, $amount);
+  variable_set('asc_giveto_counter_amount', $amount[0]);
   watchdog('opic', 'Giveto Counter Updated');
 }
