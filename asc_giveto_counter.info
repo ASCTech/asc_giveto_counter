@@ -1,0 +1,6 @@
+name = Audio to Player
+description = Display the giveto dollar amount as seen on osu.edu/giving
+core = 6.x
+package = ASC
+version = 6.x-1.0-dev
+project = asc_giveto_counter
