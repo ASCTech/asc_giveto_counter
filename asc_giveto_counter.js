@@ -1,18 +1,18 @@
         $(function(){
-                var s = 1290594846;
+                var s = Drupal.settings.asc_giveto_counter.amount;
                 var reduce = Math.floor(s*.0000009);
 var startN = s-reduce;
      $('.counter4').jOdometer({increment: 1, 
             counterStart:startN,
   counterEnd: s,
-            numbersImage:'sites/newcmtraining9.asc.ohio-state.edu/modules/asc_giveto_counter/numbers-campaign1.png',
+            numbersImage:Drupal.settings.asc_giveto_counter.modulepath + '/numbers-campaign1.png',
             delayTime: 1,
             speed: 1,
             formatNumber: true, 
             spaceNumbers: 3, 
             widthDot: 8, 
             offsetRight:0,
-            maxDigits: 11,
+            maxDigits: 12,
             prefixChar: true,
                 widthNumber: 35,
                 heightNumber: 49

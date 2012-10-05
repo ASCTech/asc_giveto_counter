@@ -4,14 +4,24 @@
  */
 
 function asc_giveto_counter_init() {
+  $asc_giveto_counter_settings = array(
+    'amount' => variable_get('asc_giveto_counter_amount', '1290594846'),
+    'modulepath' => drupal_get_path('module', 'asc_giveto_counter'),
+  );
+  drupal_add_js(array('asc_giveto_counter' => $asc_giveto_counter_settings), 'setting');
   drupal_add_js(drupal_get_path('module', 'asc_giveto_counter') . '/asc_giveto_counter.js');
   drupal_add_js(drupal_get_path('module', 'asc_giveto_counter') . '/jquery.jodometer.js');
   drupal_add_css(drupal_get_path('module', 'asc_giveto_counter') . '/asc_giveto_counter.css');
 }
 
 function asc_giveto_counter_cron() {
+  asc_giveto_counter_update_counter();
+}
+
+function asc_giveto_counter_update_counter() {
   $contents = drupal_http_request('http://www.osu.edu/giving/feeds/gift-amount.js');
   preg_match("/\d+/", $contents->data, $amount);
   variable_set('asc_giveto_counter_amount', $amount[0]);
   watchdog('opic', 'Giveto Counter Updated');
 }
+
