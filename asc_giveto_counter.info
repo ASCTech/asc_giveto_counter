@@ -1,4 +1,4 @@
-name = Audio to Player
+name = ASC Giveto Counter
 description = Display the giveto dollar amount as seen on osu.edu/giving
 core = 6.x
 package = ASC

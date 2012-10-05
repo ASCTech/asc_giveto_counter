@@ -8,3 +8,12 @@
   padding: 2px;
   width: 476px;
 }
+
+.counter4{
+  width:446px;
+  height:49px;
+  border:0px solid #ccc;
+  overflow:hidden;
+  position:relative;
+  background-color:transparent;
+}

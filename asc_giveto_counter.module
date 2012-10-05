@@ -3,10 +3,10 @@
  * Implementation of hook_init().
  */
 
-function asc_giveto_counter_menu() {
+function asc_giveto_counter_init() {
   drupal_add_js(drupal_get_path('module', 'asc_giveto_counter') . '/asc_giveto_counter.js');
   drupal_add_js(drupal_get_path('module', 'asc_giveto_counter') . '/jquery.jodometer.js');
-  drupal_add_css(drupal_get_path('module', 'asc_giveto_counter') . '/asc_giveto_counter.css', array('group' => CSS_DEFAULT, 'type' => 'file'));
+  drupal_add_css(drupal_get_path('module', 'asc_giveto_counter') . '/asc_giveto_counter.css');
 }
 
 function asc_giveto_counter_cron() {
