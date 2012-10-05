@@ -5,7 +5,7 @@ var startN = s-reduce;
      $('.counter4').jOdometer({increment: 1, 
             counterStart:startN,
   counterEnd: s,
-            numbersImage:'numbers-campaign1.png',
+            numbersImage:'sites/newcmtraining9.asc.ohio-state.edu/modules/asc_giveto_counter/numbers-campaign1.png',
             delayTime: 1,
             speed: 1,
             formatNumber: true, 
