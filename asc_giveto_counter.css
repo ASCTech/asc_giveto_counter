@@ -1,0 +1,10 @@
+.counter4-container {
+  background-color: transparent;
+  background-image: url("./tally-back.png");
+  background-position: 33px 0;
+  background-repeat: no-repeat;
+  border: 0 solid #CCCCCC;
+  margin-bottom: 1em;
+  padding: 2px;
+  width: 476px;
+}
